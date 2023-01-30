@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Головна сторінка</title>
+    <title>Main page</title>
 </head>
 <body>
 <style>
-    body{
+body {
     background-color: #ededed;
     color: #221c1c;
     font-family: system-ui;
@@ -14,29 +14,88 @@
     padding-right: 30px;
     margin: 0 auto;
     max-width: 800px;
-    }
+}
 
-    .header{
-    }
+.header {
+     display: flex;
+     font-family: system-ui;
+     padding: 20px;
+     border-bottom: 1px solid #88816f;
+}
 
+.logo {
+     border: 2px solid #88816f;
+     border-radius: 50%;
+     width: 150px;
+}
+
+.logo-title {
+     margin-left: 35px;
+     align-self: center;
+}
+
+.main {
+    display: flex;
+    margin-top: 20px;
+}
+
+#menu {
+    min-width: 200px;
+}
+
+.content {
+    margin-left: 20px;
+}
+
+*.menu-item {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: #201815;
+}
+
+.menu-item:hover {
+    background-color: #dddddd;
+}
+
+ul {
+    list-style-type: circle;
+}
 
 </style>
 
-
-<div style="
-    display: flex;
-    font-family: ui-sans-serif;
-">
-    <img src="images/Markus_gig_fellow.jpg" style="
-    border-radius: 50%;
-    width: 150px;
-">
-    <div style="
-    margin-left: 35px;
-    align-self: center;
-">
+<div class="header">
+    <img src="images/Markus_gig_fellow.jpg" class="logo">
+    <div class="logo-title">
         <div style="font-size: 250%;">Markus</div>
         <div>the gig fellow</div>
+    </div>
+</div>
+<div class="main">
+    <div id="menu">
+        <a href="#" class="menu-item">
+            Gig resources
+        </a>
+        <a href="#" class="menu-item">
+            Genres
+        </a>
+        <a href="#" class="menu-item">
+            Statistics
+        </a>
+        <a href="#" class="menu-item">
+            Logs
+        </a>
+    </div>
+    <div class="content">
+        Markus the gig fellow will help you with your choice. Tell him your place and trust him with faith.
+        <ul>
+            <li>I'll find a concert for you</li>
+            <li>I'll remind you about the concert</li>
+            <li>You'll be on time</li>
+            <li>You'll never be alone, I'll be with you</li>
+        </ul>
     </div>
 </div>
 </body>
