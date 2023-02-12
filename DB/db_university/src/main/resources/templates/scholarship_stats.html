@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Scholarship Statistics</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Record Book ID</th>
+        <th>Name</th>
+        <th>Count</th>
+        <th>Sum</th>
+        <th>Average</th>
+        <th>Min</th>
+        <th>Max</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="stat: ${statistics}">
+        <td th:text="${stat.id}"></td>
+        <td th:text="${stat.name}"></td>
+        <td th:text="${stat.count}"></td>
+        <td th:text="${#numbers.formatDecimal(stat.sum, 1, 2, 'POINT')}"></td>
+        <td th:text="${#numbers.formatDecimal(stat.average, 1, 2, 'POINT')}"></td>
+        <td th:text="${#numbers.formatDecimal(stat.min, 1, 2, 'POINT')}"></td>
+        <td th:text="${#numbers.formatDecimal(stat.max, 1, 2, 'POINT')}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
